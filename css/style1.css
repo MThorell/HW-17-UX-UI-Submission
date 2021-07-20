@@ -3,7 +3,7 @@
     margin: auto 0;
     display:flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 
@@ -16,7 +16,9 @@
 
 .logo {
     /* border: 1px solid red; */
-    width: auto 0;
+    text-align: center;
+    width: 150px;
+    height: auto;
     padding: 6px;
 }
 .nav {
@@ -49,7 +51,7 @@ nav li {
     color: gray;
 }
 li {
-    margin: 15px;
+    margin: 15px 35px;
     color: gray;
 }
 
@@ -65,37 +67,39 @@ ul {
 
 /* Hero Section */
 .heroBanner {
-    background-color: #818181;
     position: relative;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     /* border: 1px solid red; */
-    height: auto;
 
 }
 .picFrame {
     display: flex;
-    flex-direction: column;
+    justify-content: left;
     /* border: 1px solid blue; */
-    height: 600px;
-    width: auto;
-    object-fit: cover;
-    object-position: right;
-    overflow-x: hidden, left;
+    /* height: 600px; */
+    /* width: 66%; */
 }
 
 .profilePic {
     /* border: 1px solid green; */
-    position:relative;
-    left:0;
-    display: flex;
-    flex: row;
-    overflow: hidden;
-    object-position: 100% 0;
+    /* position:relative; */
+    /* left:0; */
+    /* object-position: 100% 0; */
+       overflow-x: hidden;
+        display: flex;
+        justify-content: left;
+        width: 66%;
 }
-/* .profilePic img {
-    max-width: 100%;
-    height: auto;
-} */
+.profilePic img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    overflow-x: hidden;
+
+}
 .nameBox {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 42px;
@@ -105,9 +109,8 @@ ul {
     width: 30%;
     background-color: #F79C39;
     color: white;
-    margin: auto;
+    margin: 0px 0px 35px 0px;
     z-index: 1;
-    height: 50px;
     padding: 20px;
     position: absolute;
     top: 40%;
@@ -129,30 +132,37 @@ ul {
     top: 55%;
     left: 0%;
 }
-.whiteBox {
+/* .whiteBox {
     padding: 15px;
     background-color: white;
     color: white;
     width: 1px;
-    height: 100%;
-    margin: auto 0;
+    /* margin: 0 auto; 
+} */
+.quoteFrame {
+    width: 33%;
+    background-color: #818181;
+    margin-left: 2%;
+    max-height: 600px;
+    overflow: hidden;
+  
 }
 .quoteBox {
     /* border: 1px solid red; */
     line-height: 50px ;
-    position: relative;
+    /* width: 100%; */
+    /* position: relative;
     right:0;
     display: flex;
-    text-align-last: left;
-    justify-content: center;
+    text-align-last: left; */
+    /* justify-content: center; */
     font-family: 'Josefin Sans', sans-serif;
     background-color: #818181;
     color: white;
-    margin: auto;
-    padding: 50px;
+    /* margin: auto; */
+    padding: 20% 10% 20% 10%;
     font-size: 32px;
-
-    width: 30%;
+    overflow: hidden;
 }
 /* Work Section */
 
@@ -173,16 +183,34 @@ ul {
     background-position: 60%;
 }
 .workCards {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;    
     justify-content:space-around;
+    /* overflow: hidden; */
 }
-
-.workCards img {
+.workSlot {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
     border-radius: 1.5%;
     border: 1px solid #818181;
     max-width: 500px;
-    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+.workCards img {
+ width: 100%;
+ height: auto;
+
 }
 
 /* Skills Section */
@@ -203,7 +231,7 @@ ul {
     padding: 15px;
 }
 
-.researchSkills {}
+/* .researchSkills {} */
 
 .skillsCol{
     padding: 15px;
@@ -282,21 +310,170 @@ footer li {
 
 /* Media Queries */
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    
+@media (max-width: 576px) {
+    .nameBox {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        background-color: #F79C39;
+        color: white;
+        margin: 0px 0px 35px 0px;
+        z-index: 1;
+        padding: 20px;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+    }
+    .jobTitle {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        flex: auto;
+        justify-content: center;
+        width: 30%;
+        color: #555555;
+        margin: auto 0;
+        z-index: 1;
+        height: 50px;
+        padding: 20px;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+    }
+
 }
+  
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
+    .nameBox {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        background-color: #F79C39;
+        color: white;
+        margin: 0px 0px 35px 0px;
+        z-index: 1;
+        padding: 20px;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+    }
+    .jobTitle {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        flex: auto;
+        justify-content: center;
+        width: 30%;
+        color: #555555;
+        margin: auto 0;
+        z-index: 1;
+        height: 50px;
+        padding: 20px;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+    }
+    .interestCards {
+        /* width: 22%; */
+        /* margin-left: auto; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .interestCard1 img {
+        /* justify-content: space-around; */
+        padding-bottom: 15px;
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (max-width: 1200px){
+    .profilePic img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        overflow-x: hidden;
+    }
+    .nameBox {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        background-color: #F79C39;
+        color: white;
+        margin: 0px 0px 35px 0px;
+        z-index: 1;
+        padding: 20px;
+        position: absolute;
+        top: 40%;
+        left: 0%;
+    }
+    .jobTitle {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        display: flex;
+        flex: auto;
+        justify-content: center;
+        width: 30%;
+        color: #555555;
+        margin: auto 0;
+        z-index: 1;
+        height: 50px;
+        padding: 20px;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+    }
+    .quoteFrame {
+        width: 33%;
+        background-color: #818181;
+        margin-left: 2%;
+        max-height: 400px;
+        overflow: hidden;
+      
+    }
+    .quoteBox {
+        /* border: 1px solid red; */
+        line-height: 35px ;
+        /* width: 100%; */
+        /* position: relative;
+        right:0;
+        display: flex;
+        text-align-last: left; */
+        /* justify-content: center; */
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: #818181;
+        color: white;
+        /* margin: auto; */
+        padding: 20% 10% 20% 10%;
+        font-size: 24px;
+        overflow: hidden;
+    }
+    .interestCards {
+        /* width: 22%; */
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     
+    .interestCard1 img {
+        /* justify-content: space-around; */
+        padding-bottom: 15px;
+        width: 90%;
+        height: auto;
+    }
 }
